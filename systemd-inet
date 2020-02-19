@@ -1,0 +1,23 @@
+# /etc/systemd/system/inet.service
+[Unit]
+Description=kinit ethery  hours
+
+[Service]
+User=root
+Group=root
+Type=oneshot
+WorkingDirectory=/root
+ExecStart=/usr/bin/kinit svfsadfasdfasdf1@fsadfasfsaP -k -t svfasfasdfsd.keytab
+
+
+
+# /etc/systemd/system/inet.timer
+[Unit]
+Description=kinit eheryhours
+
+[Timer]
+OnUnitActiveSec=300s
+OnBootSec=300s
+
+[Install]
+WantedBy=timers.target
