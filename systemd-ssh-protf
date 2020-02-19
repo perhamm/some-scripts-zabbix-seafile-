@@ -1,0 +1,26 @@
+[Unit]
+Description=Setup a secure tunnel
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/ssh -NT -o ServerAliveInterval=60 -o ExitOnForwardFailure=yes -i /root/.ssh/do -R 64001:10.209.afasdfasdf:443 2afasfasd9
+
+# Restart every >2 seconds to avoid StartLimitInterval failure
+RestartSec=5
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+[Unit]
+Description=Setup a secure tunnel
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/ssh -NT -o ServerAliveInterval=60 -o ExitOnForwardFailure=yes -i /root/.ssh/do -R 64000:10.209.fdasfadsfasdf:3389 20afsdfasdf9
+
+# Restart every >2 seconds to avoid StartLimitInterval failure
+RestartSec=5
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
